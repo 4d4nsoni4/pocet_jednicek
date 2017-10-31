@@ -7,7 +7,10 @@
 def pocet_jednicek(cislo):
     """ spočítá počet jedniček v čísle """
     pocet = 0
-    while cislo > 0:
+    # if cislo < 0:
+    #     cislo = -cislo
+    cislo = abs(cislo)
+    while abs(cislo) > 0:
         zbytek = cislo % 10
         if zbytek == 1:
             pocet = pocet + 1
